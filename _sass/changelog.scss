@@ -1,0 +1,107 @@
+.markdown-body .changelog-release {
+  margin: 10px 0;
+  border: 1px solid rgba(#172337, 0.07);
+  border-radius: 12px;
+  background: #f6f7f9;
+  scroll-margin-top: 24px;
+
+  > summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    min-height: 60px;
+    padding: 16px 22px;
+    border-radius: 11px;
+    color: #293344;
+    font-size: 16px;
+    font-weight: 600;
+    font-variant-numeric: tabular-nums;
+    letter-spacing: -0.015em;
+    list-style: none;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+
+    &::-webkit-details-marker {
+      display: none;
+    }
+
+    &::after {
+      content: "";
+      flex: 0 0 7px;
+      width: 7px;
+      height: 7px;
+      margin-right: 3px;
+      border-right: 1.5px solid currentColor;
+      border-bottom: 1.5px solid currentColor;
+      color: #748093;
+      transform: rotate(45deg) translate(-2px, -2px);
+      transition: transform 180ms cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+    &:active {
+      background: rgba(#172337, 0.06);
+    }
+
+    &:focus-visible {
+      outline: 2px solid $accent-color;
+      outline-offset: 3px;
+
+      &::after {
+        transition: none;
+      }
+    }
+  }
+
+  &[open] {
+    border-color: rgba($accent-color, 0.2);
+    background: #fff;
+
+    > summary {
+      color: $accent-color;
+
+      &::after {
+        color: currentColor;
+        transform: rotate(225deg) translate(-1px, -1px);
+      }
+    }
+  }
+
+  .changelog-notes {
+    padding: 0 22px 22px;
+    color: #505b6b;
+    line-height: 1.65;
+
+    > :last-child {
+      margin-bottom: 0;
+    }
+
+    li + li {
+      margin-top: 8px;
+    }
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .markdown-body .changelog-release > summary:hover {
+    background: rgba(#172337, 0.035);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .markdown-body .changelog-release > summary::after {
+    transition: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .markdown-body .changelog-release {
+    > summary {
+      padding-inline: 16px;
+    }
+
+    .changelog-notes {
+      padding: 0 16px 18px;
+    }
+  }
+}
