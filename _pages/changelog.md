@@ -4,9 +4,72 @@ title: What's New
 include_in_header: true
 ---
 
-### `Version 1.14.2`
+# AirScrobble 1.15.0: Say it. Scrobble it.
+
+## Scrobble songs with Siri
+
+You can now say “Add this song to AirScrobble” to scrobble a song from what you're looking at, such as a music video or a track a friend sent you! Siri will show you the song for confirmation before adding it to Last.fm, without needing to open the app.
+
+*Requires iOS 27 and a compatible device.*
+
+<p align="center">
+  <img src="{{ '/assets/updates/ios27/Siri%20AI.png' | relative_url }}" alt="Scrobble songs with Siri in AirScrobble" width="600" />
+</p>
+
+## iPhone Duo support
+
+AirScrobble has been adapted for iPhone Duo! You can view your history alongside the current song when unfolded, and the app adjusts its layout as you fold or rotate your device.
+
+<p align="center">
+  <img src="{{ '/assets/updates/ios27/iPhone%20Duo.png' | relative_url }}" alt="AirScrobble on iPhone Duo" width="600" loading="lazy" />
+</p>
+
+## Continuous Listening improvements
+
+Continuous Listening can once again identify songs playing on your iPhone or iPad, including through headphones and AirPods! You can also start and stop listening from Control Center, or use the new Start Continuous Listening action in Shortcuts to start a new session without opening the app.
+
+<p align="center">
+  <img src="{{ '/assets/updates/ios27/Auto%20Match%20is%20Back.png' | relative_url }}" alt="Continuous Listening in AirScrobble" width="600" loading="lazy" />
+</p>
+
+## Scrobble entire albums
+
+Listening to a full album? Match one of its songs and use Album Scrobbling to add the other tracks to Last.fm. You can choose which songs to include, and tracks you've already scrobbled will be skipped automatically.
+
+The app calculates timestamps for each song, but you can also edit them yourself. Enable “Shift Other Tracks” when changing a timestamp to adjust the rest of the album along with it.
+
+*Requires AirScrobble+.*
+
+<p align="center">
+  <img src="{{ '/assets/updates/ios27/Album%20Scrobble.png' | relative_url }}" alt="Review album tracks before scrobbling in AirScrobble" width="600" loading="lazy" />
+</p>
+
+## Find albums with Visual Intelligence
+
+You can also use Visual Intelligence to find an album from its cover! Point your camera at the record, tap Search, and select AirScrobble to review and scrobble its tracks. If the cover isn't recognized, try scanning the barcode on the back instead.
+
+*Requires iOS 26, a compatible device, and AirScrobble+.*
+
+<p align="center">
+  <img src="{{ '/assets/updates/ios27/Visual%20Album%20Scrobble.png' | relative_url }}" alt="Find albums with Visual Intelligence and AirScrobble" width="600" loading="lazy" />
+</p>
+
+## Bug fixes
+
+- Fixed issues with Live Activities showing the wrong sign-in status or staying active after listening stops.
+- Improved scrobble status in History when Last.fm corrects a song's metadata.
+- Fixed account information not refreshing when signing in from another screen.
+
+As always, if you need any help with the app or want to share what you'd like to see next, let me know at [support@airscrobble.com](mailto:support@airscrobble.com)!
+
+<details class="changelog-release" id="version-1142" markdown="1">
+<summary>Version 1.14.2</summary>
+<div class="changelog-notes" markdown="1">
 
 - Fixed an issue that could prevent Auto Match from activating the microphone for continuous listening.
+
+</div>
+</details>
 
 <details class="changelog-release" id="version-1141" markdown="1">
 <summary>Version 1.14.1</summary>
